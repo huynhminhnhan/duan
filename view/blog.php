@@ -1,3 +1,6 @@
+<?php
+require_once "dao/blog.php";
+?> 
 <section class="about n_blog"> 
             <div class="container">
                 <div class="main-title-section">

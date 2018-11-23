@@ -1,6 +1,6 @@
 <?php
 require_once "dao/album.php";
-?>
+?> 
 <section class="ablum">
         <div class="container">
             <div class="row text-center">

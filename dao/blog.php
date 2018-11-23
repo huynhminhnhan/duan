@@ -6,8 +6,8 @@ require_once 'pdo.php';
  * @param String $ten_album là tên loại
  * @throws PDOException lỗi thêm mới
  */
-function blog_insert($tenalb,$ma_dv,$img_album){
-    $sql = "INSERT INTO album(tenalb,madv,img_album) VALUES(?,?,?)";
+function album_insert($tenalb,$ma_dv,$img_album){
+    $sql = "INSERT INTO (tenalb,madv,img_album) VALUES(?,?,?)";
     pdo_execute($sql, $tenalb,$ma_dv,$img_album);
 }
 
