@@ -53,6 +53,7 @@
                         <li><i class="fa fa-table"></i><a href="?ad_home">Quan ly Album</a></li>
                             <li><i class="fa fa-table"></i><a href="?qlkh">Quan ly Khach Hang</a></li>
                             <li><i class="fa fa-table"></i><a href="?qldv">Quan ly dich vu</a></li>
+                            <li><i class="fa fa-table"></i><a href="?qlblog">Quan ly tin tuc</a></li>
                             <li><i class="fa fa-table"></i><a href="?qlhinh">Quan ly Hình</a></li>
                         </ul>
                     </li>
@@ -235,6 +236,9 @@ function exist_param($page) {
 }
 else if (exist_param("qldv")) {
     $view_page = "admin/qldv.php";
+}
+else if (exist_param("qlblog")) {
+    $view_page = "admin/qlblog.php";
 }
 else if (exist_param("qlhinh")) {
     $view_page = "admin/qlhinh.php";
