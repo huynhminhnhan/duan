@@ -1,3 +1,6 @@
+<?php
+require './dao/blog.php'
+?>
 <section class="about n_blog"> 
             <div class="container">
                 <div class="main-title-section">
@@ -36,7 +39,17 @@
                     <div class="col-md-9 detailblog" >
                         <div class="row cuonglol">
                             <div class="taitel">
-                                <h1>Tin Mới</h1>
+                                <h1><?php 
+                               
+                                $dsblog = blog_select_all();
+                                $tenbl =$dsblog[0]['tenloaiblog'];
+                            // print_r ($tenbll[0].['tenloaiblog']) ;
+                               echo $tenbl;
+                                
+                               
+
+                                ?>
+                                </h1>
                             </div>
                             <div class="col-md-4 text-left mb-3">
                                <a href="#"><img  src="view/assets/img/x1.jpg" alt=""></a>
@@ -61,7 +74,16 @@
                               <hr>
                               <div class="row cuonglol">
                                 <div class="taitel">
-                                <h1>Phổ Biến</h1>
+                                <h1><?php 
+                               
+                               $dsblog = blog_select_all();
+                               $tenbl =$dsblog[1]['tenloaiblog'];
+                           // print_r ($tenbll[0].['tenloaiblog']) ;
+                              echo $tenbl;
+                               
+                              
+
+                               ?></h1>
                             </div>
                             <div class="col-md-4 text-left mb-3">
                                <a href="#"><img src="view/assets/img/x1.jpg" alt=""></a>
@@ -87,7 +109,18 @@
                               <hr>
                               <div class="row cuonglol">
                                 <div class="taitel">
-                                <h1>Thời Sự</h1>
+                                <h1>
+                                <h1><?php 
+                               
+                               $dsblog = blog_select_all();
+                               $tenbl =$dsblog[1]['tenloaiblog'];
+                            // print_r ($tenbll[0].['tenloaiblog']) ;
+                              echo $tenbl;
+                               
+                              
+
+                               ?></h1>
+                                </h1>
                             </div>
                             <div class="col-md-4 text-left mb-3">
                                 <a href="#"><img src="view/assets/img/x1.jpg" alt=""></a>
