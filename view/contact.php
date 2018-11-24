@@ -20,7 +20,7 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-xs-12 site-form" style="height:300px;">
                             <form id="my-form" style="margin-top:-4rem;float:right;">
-                                <h1 style="font-family:'Alex Brush';"><strong><span style="text-decoration: underline;">Let's
+                                <h1><strong><span style="text-decoration: underline;">Let's
                                             talk</span></strong></h1>
                                 <div class="form-group"><label class="control-label sr-only" for="firstname">First Name</label></div>
                                 <div class="form-group"><label class="control-label sr-only" for="lastname">Last Name</label><input
