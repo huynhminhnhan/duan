@@ -7,13 +7,13 @@
   require_once("dao/blog.php");
   
   if(isset($_POST['submit'])){
-    $tenblog = $_POST['tenblog'];
+    $tenloaiblog = $_POST['tenblog'];
     
-    $hinh = $_FILES['img']['name'];
-    if(!empty($hinh)) {
-      $tmp = $_FILES['img']['tmp_name'];
-      $hinh  = time().$hinh; // noi ten anh 
-      $new_path = "./view/assets/upload/".$hinh;
+    $hinh_lb = $_FILES['imglb']['name'];
+    if(!empty($hinh_lb)) {
+      $tmp = $_FILES['imglb']['tmp_name'];
+      $hinh_lb  = time().$hinh_lb; // noi ten anh 
+      $new_path = "./view/assets/upload/".$hinh_lb;
 
       if (!move_uploaded_file($tmp,$new_path)) {
         $error = " upload that bai ";
@@ -22,13 +22,20 @@
         move_uploaded_file($tmp,$new_path);
       }
     }
+
     else {
      $error = " Anh khong duoc de trong ";
     }
 
    
-    blog_insert($tenblog,$hinh);
+    blog_insert($hinh_lb,$tenloaiblog);
     
+    
+    if(is_file($new_path)){
+      $new_path="<img src= '$new_path' width=150>";
+    }else{
+      $new_path="no data";
+    }
     
   }
 
@@ -55,7 +62,7 @@
                           
                           <div class="row form-group">
                             <div class="col col-md-3"><label for="file-input" class=" form-control-label">Hình</label></div>
-                            <div class="col-12 col-md-9"><input type="file" id="file-input" name="img" class="form-control-file"></div>
+                            <div class="col-12 col-md-9"><input type="file" id="file-input" name="imglb" class="form-control-file"></div>
                           </div>
                          
                           
@@ -100,22 +107,23 @@
                               foreach ($dsblog as $dsblog) {
                                 $i+=1;
                                 extract($dsblog);
-                                $xoa = "<a href='?qlbl&id=$mablog&del=1'>Xóa</a>";
+                                $xoa = "<a href='?qlblog&id=$maloaiblog&del=1'>Xóa</a>";
 					  	                 // $update = "<a href='?loai&id=$mablog&update=1'>update</a>";
-                                $new_path = "./view/assets/upload/".$hinh;
+                               $new_path = "./view/assets/upload/".$hinh_lb;
+                               //$exprotHinh = "./view/assets/upload/".$hinh_lb;
                                 if(is_file($new_path)){
-                                  $new_path="<img src='$new_path' width=150>";
+                                  $new_path="<img src= '$new_path' width=150>";
                                 }else{
                                   $new_path="no data";
                                 }
                                 echo '<tr>
                                 <th scope="row">'.$i.'</th>
                                 
-                                <td>'.$tenblog.'</td>
+                                <td>'.$tenloaiblog.'</td>
                                 
                                 <td>'.$new_path.'</td>
                                 
-                                <td><a href="">Sửa</a></td>
+                                <td><a >Sửa</a></td>
                                 <td><a href="">'.$xoa.'</a></td>
                               </tr>';
                               }
