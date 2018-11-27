@@ -59,8 +59,8 @@
 
         <div class="row">
         <?php 
+        
             require_once ('./dao/album.php');
-          
             $dshinhalb = album_select_all();
             // extract($dshinhalb);
 

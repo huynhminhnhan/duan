@@ -40,14 +40,10 @@ require './dao/blog.php'
                         <div class="row cuonglol">
                             <div class="taitel">
                                 <h1><?php 
-                               
                                 $dsblog = blog_select_all();
                                 $tenbl =$dsblog[0]['tenloaiblog'];
                             // print_r ($tenbll[0].['tenloaiblog']) ;
                                echo $tenbl;
-                                
-                               
-
                                 ?>
                                 </h1>
                             </div>
@@ -74,15 +70,11 @@ require './dao/blog.php'
                               <hr>
                               <div class="row cuonglol">
                                 <div class="taitel">
-                                <h1><?php 
-                               
+                                <h1><?php
                                $dsblog = blog_select_all();
                                $tenbl =$dsblog[1]['tenloaiblog'];
                            // print_r ($tenbll[0].['tenloaiblog']) ;
                               echo $tenbl;
-                               
-                              
-
                                ?></h1>
                             </div>
                             <div class="col-md-4 text-left mb-3">
@@ -110,15 +102,11 @@ require './dao/blog.php'
                               <div class="row cuonglol">
                                 <div class="taitel">
                                 <h1>
-                                <h1><?php 
-                               
+                                <h1><?php
                                $dsblog = blog_select_all();
-                               $tenbl =$dsblog[1]['tenloaiblog'];
+                               $tenbl =$dsblog[2]['tenloaiblog'];
                             // print_r ($tenbll[0].['tenloaiblog']) ;
                               echo $tenbl;
-                               
-                              
-
                                ?></h1>
                                 </h1>
                             </div>
