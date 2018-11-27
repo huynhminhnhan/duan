@@ -7,7 +7,7 @@
   require_once("dao/blog.php");
   
   if(isset($_POST['submit'])){
-    $tenblog = $_POST['tenblog'];
+    $tenloaiblog = $_POST['tenloaiblog'];
     
     $hinh = $_FILES['img']['name'];
     if(!empty($hinh)) {
@@ -37,6 +37,8 @@
     $id = $_GET['id'];
     blog_delete($id);
   }
+  //update
+
   ?>
       
       
