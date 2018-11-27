@@ -127,8 +127,8 @@
                 <h1></h1>
             </div>
             <div class="col-md-4" style="height:420px;align-items:center;">
-                <h1 style="font-size:33px;font-family:'Alex Brush';color:rgb(205,81,81);text-align:center;margin-left:1rem;margin-top:19rem;"><strong>"
-                        Yêu Là Phải Cưới <br> Cưới là phải đẻ"</strong></h1>
+                <h1 style="font-size:33px;color:rgb(205,81,81);text-align:center;margin-left:1rem;margin-top:19rem;"><strong>"
+                        Yêu Là Phải Cưới <br> Cưới Là Phải Đẻ"</strong></h1>
             </div>
             <div class="col-md-4" style="height:420px;">
                 <h1></h1>
@@ -144,7 +144,7 @@
                     <div class="row">
                         <div class="col-md-6 col-sm-6 col-xs-12 site-form" style="height:300px;">
                             <form id="my-form" style="margin-top:-4rem;float:right;">
-                                <h1 style="font-family:'Alex Brush';"><strong><span style="text-decoration: underline;">Let's
+                                <h1><strong><span style="text-decoration: underline;">Let's
                                             talk</span></strong></h1>
                                 <div class="form-group"><label class="control-label sr-only" for="firstname">First Name</label></div>
                                 <div class="form-group"><label class="control-label sr-only" for="lastname">Last Name</label><input
@@ -165,7 +165,7 @@
                         </div>
                     </div>
                 </div>
-                <h1 style="font-family:'Alex Brush';text-align:center;"></h1>
+               
             </div>
             <?php 
             

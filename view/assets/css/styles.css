@@ -51,8 +51,9 @@ display: inline;
 }
 .abouttow
 {
-	background-image: url('../img/ab3.jpg');
-	background-size: cover;
+	background-image: url('../img/ab2.jpg');
+  background-size: cover;
+  background-position: center;
 	
 
 }
@@ -67,7 +68,8 @@ display: inline;
 	background-image: url('../img/ab5.jpeg');
 	background-size: cover;
 	background-position: center;
-	background-attachment: fixed;
+  background-attachment: fixed;
+  text-align: center;
 }
 .wpd_wrapper h2
 {
@@ -84,7 +86,6 @@ display: inline;
 	font-size: 54px;
 	line-height: 64px;
 	color: #222222;
-	font-family: open sans;
 	font-weight: bold;
 
 	
@@ -92,7 +93,7 @@ display: inline;
 .chu h3{
 	font-size: 18px;
 	line-height: 23px;
-	font-family: Oswald;
+	
 
 }
 .vc_column-inner
@@ -855,9 +856,11 @@ audio, canvas, iframe, img, svg, video {
   font-weight: bold;
 }
 .h-form h1 {
-  font-family:"Alex Brush";
   text-align:center;
   color: #fff;
+  font-family:"Alex Brush";
+  text-align:center;
+  font-weight: bold;
 }
 .container-fluid{
 	padding-right: 0px;
@@ -897,7 +900,6 @@ audio, canvas, iframe, img, svg, video {
 }
 .text-header h4{
 	margin-top: 15px;
-	font-family: inherit;
 	color: inherit;
 	letter-spacing: 3px;
 	line-height: 18px;
@@ -907,7 +909,6 @@ audio, canvas, iframe, img, svg, video {
 .text-header h1{
 	color: black	;
 	text-align: center;
-	font-family: Alex Brush;
 	font-size: 80px;
 }
 .one, .tow, .three, .for, .year {
@@ -1271,7 +1272,6 @@ a .jmgmin:hover{
     border: 0px;
   }
   .detailblog{
-    font-family: inherit;
     font-weight: normal;
     
     padding-right: 0px!important;
@@ -1306,7 +1306,6 @@ a .jmgmin:hover{
     margin-bottom: 1.5rem;
   }
   .detaiblog h1{
-    font-family: inherit;
     font-weight: normal;
     font-size: 50px;
   }

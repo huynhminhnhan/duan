@@ -23,7 +23,7 @@
             <h3 class="btn btn-warning" style="float: right;"> Chọn</h3>
 
         </div>
-        <div class="col-sm-9 xamlo" style="float: left;">
+        <div class="col-sm-9 xamlo">
         <div class="grid">
         <div class="grid-sizer"></div>
             <?php 
