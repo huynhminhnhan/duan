@@ -6,15 +6,9 @@ require_once 'pdo.php';
  * @param String $ten_dichvu là tên loại
  * @throws PDOException lỗi thêm mới
  */
-<<<<<<< HEAD
 function blog_insert($hinh_lb,$tenloaiblog){
     $sql = "INSERT INTO loaiblog(imgloaiblog,tenloaiblog) VALUES(?,?)";
     pdo_execute($sql, $hinh_lb,$tenloaiblog);
-=======
-function blog_insert($tenloaiblog,$hinh){
-    $sql = "INSERT INTO loaiblog(tenloaiblog,imgloaiblog) VALUES(?,?)";
-    pdo_execute($sql, $tenloaiblog,$hinh);
->>>>>>> 4331b05e9eb33c4d904ecd1f835aac3918276cc4
 }
 
 /**
@@ -70,17 +64,10 @@ function blog_select_all(){
  * @return boolean có tồn tại hay không
  * @throws PDOException lỗi truy vấn
  */
-<<<<<<< HEAD
 /* function dichvu_exist($madichvu){
     $sql = "SELECT count(*) FROM dichvus WHERE madichvu=?";
     return pdo_query_value($sql, $madichvu) > 0;
 } */
-=======
-function loaiblog_exist($maloaiblog){
-    $sql = "SELECT count(*) FROM loaiblog WHERE maloaiblog=?";
-    return pdo_query_value($sql, $maloaiblog) > 0;
-}
->>>>>>> 4331b05e9eb33c4d904ecd1f835aac3918276cc4
 //menu đa cấp
 //function Menu($parent = 0,$space = '---', $trees = NULL){ 
 //        if(!$trees){ $trees = array(); }

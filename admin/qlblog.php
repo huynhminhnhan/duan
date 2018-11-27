@@ -7,11 +7,7 @@
   require_once("dao/blog.php");
   
   if(isset($_POST['submit'])){
-<<<<<<< HEAD
     $tenloaiblog = $_POST['tenblog'];
-=======
-    $tenloaiblog = $_POST['tenloaiblog'];
->>>>>>> 4331b05e9eb33c4d904ecd1f835aac3918276cc4
     
     $hinh_lb = $_FILES['imglb']['name'];
     if(!empty($hinh_lb)) {
