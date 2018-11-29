@@ -174,7 +174,45 @@
                    <li><a href="?about"><button
                    
                         class="btn btn-default navbar-btn" type="button" style="height:40px;width:150px;background:inherit;margin-left:1rem;border-color:rgb(251,249,249);">About</button></a></li>
-                        <li><a href="?dichvu"><button class="btn btn-default navbar-btn" type="button" style="height:40px;width:150px;background:inherit;margin-left:1rem;border-color:rgb(251,249,249);">Dịch Vụ</button></a></li> 
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" ><button class="btn btn-default navbar-btn" type="button" style="height:40px;width:150px;background:inherit;margin-left:1rem;border-color:rgb(251,249,249);">Dịch Vụ</button></a>
+                      <ul class="dropdown-menu" role="menu">
+                        
+                        <li>
+                          <a href="">
+                            <img src="view/assets/img/a3-1.jpg" width="50%" alt="">
+                            <h3>ADVERTISING PHOTOGRAPHY</h3>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="">
+                            <img src="view/assets/img/a3-1.jpg" width="50%"  alt="">
+                            <h3>ADVERTISING PHOTOGRAPHY</h3>
+                          </a>
+                        </li>
+
+                        <li>
+                          <a href="">
+                            <img src="view/assets/img/a3-1.jpg" width="50%"  alt="">
+                            <h3>ADVERTISING PHOTOGRAPHY</h3>
+                          </a>
+                        </li>
+                        <li>
+                          <a href="">
+                            <img src="view/assets/img/a3-1.jpg" width="50%"  alt="">
+                            <h3>ADVERTISING PHOTOGRAPHY</h3>
+                          </a>
+                        </li>
+                        <li class="block_menu"> <hr style="display:block;background:black;"></li>
+                       
+                        <li class="block_menu"> 
+                          <a href="?dichvu">
+                          
+                            <h3>Xem tất cả dịch vụ</h3>
+                          </a>
+                        </li>
+                      </ul>
+                      </li> 
                        <li><a href="?blog"><button class="btn btn-default navbar-btn" type="button" style="height:40px;width:150px;background:inherit;margin-left:1rem;border-color:rgb(251,249,249);">Blog</button></a></li> 
                        <li><a href="?album"><button
 
@@ -187,3 +225,4 @@
             </div>
         </nav>
     </div>
+    
