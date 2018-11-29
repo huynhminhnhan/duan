@@ -111,19 +111,19 @@
                                 extract($dsblog);
                                 $xoa = "<a href='?qlblog&id=$maloaiblog&del=1'>Xóa</a>";
 					  	                 // $update = "<a href='?loai&id=$mablog&update=1'>update</a>";
-                               $new_path = "./view/assets/upload/".$hinh_lb;
+                               $new_path_curr = "./view/assets/upload/".$imgloaiblog;
                                //$exprotHinh = "./view/assets/upload/".$hinh_lb;
-                                if(is_file($new_path)){
-                                  $new_path="<img src= '$new_path' width=150>";
+                                if(is_file($new_path_curr)){
+                                  $new_path_curr="<img src= '$new_path_curr' width=150>";
                                 }else{
-                                  $new_path="no data";
+                                  $new_path_curr="no data";
                                 }
                                 echo '<tr>
                                 <th scope="row">'.$i.'</th>
                                 
                                 <td>'.$tenloaiblog.'</td>
                                 
-                                <td>'.$new_path.'</td>
+                                <td>'.$new_path_curr.'</td>
                                 
                                 <td><a >Sửa</a></td>
                                 <td><a href="">'.$xoa.'</a></td>
