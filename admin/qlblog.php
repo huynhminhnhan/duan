@@ -45,6 +45,35 @@
     blog_delete($id);
   }
   //update
+  if(isset($_POST['updateblb'])) {
+    $tenalbum = $_POST['tenalb'];
+    $madv = $_POST['madv'];
+    $img_album = $_FILES['imgalb']['name'];
+      if(!empty($img_album)) {
+        $tmp = $_FILES['imgalb']['tmp_name'];
+        $img_album  = time().$img_album; // noi ten anh 
+        $new_path = "./view/assets/upload/".$img_album;
+  
+        if (!move_uploaded_file($tmp,$new_path)) {
+          $error = " upload that bai ";
+        }
+        else {
+          move_uploaded_file($tmp,$new_path);
+        }
+      }
+      else {
+       $error = " Anh khong duoc de trong ";
+      }
+    
+    $new_path = "./view/assets/upload/".$img_album;
+    if(is_file($new_path)){
+      $new_path="<img src='$new_path' width=150>";
+    }else{
+      $new_path="no data";
+    }
+    $maalb = $_POST['maalb'];
+    album_update($tenalbum,$madv,$img_album,$maalb);
+  }
 
   ?>
       
