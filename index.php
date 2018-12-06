@@ -12,14 +12,8 @@ session_start();
     <link rel="stylesheet" href="view/assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="view/assets/fonts/ionicons.min.css">
     <link rel="stylesheet" href="view/assets/fonts/material-icons.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aclonica">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Acme">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aguafina+Script">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Aladin">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alex+Brush">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amaranth">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Baumans">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Berkshire+Swash">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700" rel="stylesheet">
+
     <link href="https://fonts.googleapis.com/css?family=Hind:300,400,500,600,700" rel="stylesheet">
     <link rel="stylesheet" href="view/assets/css/Fixed-navbar-starting-with-transparency1.css">
     <link rel="stylesheet" href="view/assets/css/Fixed-navbar-starting-with-transparency.css">
@@ -101,6 +95,7 @@ elseif (exist_param("albumdetail")) {
                         <script src="view/assets/js/Fixed-navbar-starting-with-transparency.js"></script>
                         <script src="view/assets/js/waypoints.min.js"></script>
                         <script src="view/assets/js/jquery.counterup.min.js"></script>
+                        
                     </body>
 
                     </html>

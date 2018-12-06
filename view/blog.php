@@ -67,6 +67,9 @@ require './dao/blog.php'
                             </div>
                               <!-- END COL -->
                               </div>
+                              <div>
+                              <a href="#">Xem Thêm ... </a>
+                              </div>
                               <hr>
                               <div class="row cuonglol">
                                 <div class="taitel">
@@ -98,6 +101,10 @@ require './dao/blog.php'
                             </div>
                               <!-- END COL -->
                               </div>
+                              <div>
+                              <a href="#">Xem Thêm ... </a>
+                              </div>
+                              
                               <hr>
                               <div class="row cuonglol">
                                 <div class="taitel">
@@ -127,8 +134,15 @@ require './dao/blog.php'
                                 <a href="#"><h4>ĐỊA ĐIỂM CHỤP NGOẠI CẢNH Ở TP HCM</h4></a>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio quos veritatis id ipsam cupiditate, vel, obcaecati esse dolores dicta, ducimus accusamus quisquam amet.</p>
                             </div>
+                            
                               <!-- END COL -->
+                              
+
                         </div>
+                        <div>
+                              <a href="#">Xem Thêm ... </a>
+                              </div>
+                        
 
                           <!-- END detailblon-con-oneL -->
                     </div>

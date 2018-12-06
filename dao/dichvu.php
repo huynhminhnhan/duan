@@ -47,7 +47,10 @@ function dichvu_select_all(){
     $sql = "SELECT * FROM dichvu ORDER BY madv DESC";
     return pdo_query($sql);
 }
-
+function dichvu_select_all_lm(){
+    $sql = "SELECT * FROM dichvu ORDER BY madv DESC LIMIT 4";
+    return pdo_query($sql);
+}
 /**
  * Truy vấn một loại theo mã
  * @param int $madichvu là mã loại cần truy vấn

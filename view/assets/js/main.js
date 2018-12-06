@@ -74,3 +74,12 @@ $(window, document, undefined).ready(function() {
     columnWidth: 200,
     layoutMode: 'fitRows'
   });
+  $(document).ready(function(){
+    /* $('ul.nav li a').click(function(){
+      $('li a').removeClass("active");
+      $(this).addClass("active");
+  }); */
+ 
+  });
+  xxx = document.getElementById('navcol-1');
+  console.log(xxx);

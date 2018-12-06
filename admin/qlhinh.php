@@ -19,25 +19,46 @@ if (isset($_POST['submit'])) {
    print_r (explode(".",$hinh));
    $dem++;
  } */
-  $hinh = $_FILES['hinh']['name'];
-    if(!empty($hinh)) { 
-      $tmp = $_FILES['hinh']['tmp_name'];
-      $hinh  = time().$hinh; // noi ten anh 
-      $new_path = "./view/assets/upload/".$hinh;
-
-      if (!move_uploaded_file($tmp,$new_path)) {
-        $error = " upload that bai ";
+  $hinh = $_FILES['hinh'];
+  if(isset($hinh))
+  {
+     // $img_desc = reArrayFiles($img);
+      //print_r($img_desc);
+      $type_img = array("PNG","png","jpg","JPG","jpeg","JPEG","GIF","gif");
+      for ($i = 0 ; $i<count($hinh["name"]); $i++) {
+          $taget_file = "./view/assets/upload/".basename($hinh["name"][$i]);
+          $upload_erro  = 0;
+          $img_type_file = pathinfo($taget_file,PATHINFO_EXTENSION);
+          $new_path = $hinh["tmp_name"][$i].$taget_file;
+          if(!in_array($img_type_file,$type_img)) {
+              echo "vui long chon file jpg , png , jpeg , gif";
+              $upload_erro  = 0;
+          }
+         else {
+          $upload_erro  = 1;
+         }
+         // echo $img["name"][$i]."<br>";
+          if ($upload_erro == 0) {
+              echo "Sorry ! your file can not upload";
+          }
+          else {
+              move_uploaded_file($hinh["tmp_name"][$i],$taget_file);
+             // echo "your file ".basename($new_path)."was upload"."<br>";
+          }
+          
+           
+          $name_arr_img =  implode("+",($hinh["name"]));
+           
+          
       }
-      else {
-        move_uploaded_file($tmp,$new_path);
-      }
+  
     
-    }
-    else {
-     $error = " Anh khong duoc de trong ";
-    }
+      
+     // echo $name_arr_img;
+      
+  }
    
-    hinh_insert($hinh,$ma_kh,$maalb);
+    hinh_insert($name_arr_img,$ma_kh,$maalb);
 }
 if (isset($_GET['del'])) {
   $id = $_GET['id'];
@@ -131,8 +152,11 @@ if (isset($_GET['del'])) {
                                 foreach ($dshinh as $dshinh ) {
                                   $i+=1;
                                   extract($dshinh);
+                                  $ex_hinh = explode("+",$hinh);
+                                  foreach ($ex_hinh as $key=>$value) {
+                                     
                                   $xoa = "<a href='?qlhinh&id=$mahinh&del=1'>Xóa</a>";
-                                   $new_path = "./view/assets/upload/".$hinh;
+                                   $new_path = "./view/assets/upload/".$value;
                                    if(is_file($new_path)){
                                      $new_path="<img src='$new_path' width=150>";
                                    }else{
@@ -148,6 +172,7 @@ if (isset($_GET['del'])) {
                                   <td><a href="">Sửa</a></td>
                                   <td><a href="">'.$xoa.'</a></td>
                                 </tr>';
+                                  }
                                 }
                                 
                                 ?>

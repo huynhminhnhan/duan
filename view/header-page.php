@@ -7,7 +7,7 @@
                             class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav main-nav">
-                    <li><a href="?home"> <button class="btn btn-default active navbar-btn" type="button"
+                    <li class="active"><a href="?home"> <button class="btn btn-default navbar-btn" type="button"
                         style="height:40px;width:150px;background:inherit;border-color:black;border-style:inset;">Home</button></a></li>
                    <li><a href="?about"><button
                    

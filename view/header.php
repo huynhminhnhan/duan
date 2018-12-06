@@ -169,12 +169,47 @@
                             class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button></div>
                 <div class="collapse navbar-collapse" id="navcol-1">
                     <ul class="nav navbar-nav main-nav">
-                    <li><a href="?home"> <button class="btn btn-default active navbar-btn" type="button"
+                    <li><a href="?home" class="active"> <button class="btn btn-default navbar-btn" type="button"
                         style="height:40px;width:150px;background:inherit;border-color:black;border-style:inset;">Home</button></a></li>
                    <li><a href="?about"><button
                    
                         class="btn btn-default navbar-btn" type="button" style="height:40px;width:150px;background:inherit;margin-left:1rem;border-color:rgb(251,249,249);">About</button></a></li>
-                        <li><a href="?dichvu"><button class="btn btn-default navbar-btn" type="button" style="height:40px;width:150px;background:inherit;margin-left:1rem;border-color:rgb(251,249,249);">Dịch Vụ</button></a></li> 
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" ><button class="btn btn-default navbar-btn" type="button" style="height:40px;width:150px;background:inherit;margin-left:1rem;border-color:rgb(251,249,249);">Dịch Vụ</button></a>
+                      <ul class="dropdown-menu" role="menu">
+                      <?php
+require './dao/dichvu.php';
+$dsdv = dichvu_select_all_lm();
+           
+foreach ($dsdv as $dsdv) {
+    extract($dsdv);
+    $new_path = "./view/assets/upload/".$hinh;
+                    if(is_file($new_path)){
+                      $new_path="<img src='$new_path' width=50% >";
+                    }else{
+                      $new_path="no data";
+                    }
+    echo ' <li>
+    <a href="">
+      '.$new_path.'
+      <h3> '.$tendv.'</h3>
+    </a>
+  </li>
+';
+}
+?>
+                       
+                      
+                        <li class="block_menu"> <hr style="display:block;background:black;"></li>
+                       
+                        <li class="block_menu"> 
+                          <a href="?dichvu">
+                          
+                            <h3>Xem tất cả dịch vụ</h3>
+                          </a>
+                        </li>
+                      </ul>
+                      </li> 
                        <li><a href="?blog"><button class="btn btn-default navbar-btn" type="button" style="height:40px;width:150px;background:inherit;margin-left:1rem;border-color:rgb(251,249,249);">Blog</button></a></li> 
                        <li><a href="?album"><button
 
@@ -187,3 +222,4 @@
             </div>
         </nav>
     </div>
+    
