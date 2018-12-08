@@ -56,6 +56,9 @@ if (exist_param("dangxuat")) {
 elseif (exist_param("blog")) {
     $view_page = "view/blog.php";
 }
+elseif (exist_param("dvdetail")) {
+    $view_page = "view/servicedeatail.php";
+}
 elseif (exist_param("album")) {
     $view_page = "view/album.php";
 }
