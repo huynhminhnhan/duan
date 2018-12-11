@@ -1,5 +1,6 @@
 <?php
-require './dao/blog.php'
+require_once "dao/blog.php";
+
 ?>
 <section class="about n_blog"> 
             <div class="container">
@@ -148,30 +149,8 @@ require './dao/blog.php'
                     </div>
                        <!--  END COL 9  -->
 
-                    <div class="col-md-3 blogg mb-3" id="col-3-menu">
-                        <div class="fix-menu">
-                            <h3>Dịch Vụ Cưới</h3>
-                            <ul class="list-group">
-                                <li class="list-group-item">Giảm Giá</li>
-                                <li class="list-group-item">Trọn Gói Cưới</li>
-                                <li class="list-group-item">Chụp Hình Cưới</li>
-                                <li class="list-group-item">Trang Điểm Cô Dâu</li>
-                                <li class="list-group-item">Đơn Giá</li>
-                            </ul>
-
-
-
-                            <h3>Tin Tức Cưới</h3>
-                            <ul class="list-group">
-                                <li class="list-group-item">Chụp Hình Ngoại Cảnh</li>
-                                <li class="list-group-item">Trọn Gói Cưới</li>
-                                <li class="list-group-item">Chụp Hình Cưới</li>
-                                <li class="list-group-item">Trang Điểm Cô Dâu</li>
-                                <li class="list-group-item">Trang Trí</li>
-                            </ul>
-                        </div>
-                       <!--  END FIX MENU  -->
-                    </div>
+                      <?php require_once 'sidebar.php' ?>
+                        
                    <!--  END COL 3  -->
             </div>
             <!-- END ROW  -->

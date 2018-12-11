@@ -61,6 +61,10 @@ function dichvu_select_by_id($madichvu){
     $sql = "SELECT * FROM dichvusanpham WHERE madichvu=?";
     return pdo_query_one($sql, $madichvu);
 }
+function dichvu_select_all_by_madv($madv){
+    $sql = "SELECT * FROM dichvu WHERE madv=?";
+    return pdo_query_one($sql, $madv);
+}
 /**
  * Kiểm tra sự tồn tại của một loại
  * @param int $madichvu là mã loại cần kiểm tra

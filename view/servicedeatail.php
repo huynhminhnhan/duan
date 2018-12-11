@@ -1,5 +1,5 @@
 <?php
-require "./dao/dichvu.php";
+require_once "dao/dichvu.php";
 ?>
 <section class="about">
                 <div class="container">
@@ -61,68 +61,31 @@ require "./dao/dichvu.php";
             <div class="container">
                 <div class="row">
                     <div class="col-md-9">
-
-                        <h2>Dịch Vụ Cưới Trọn Gói</h2>
+                        <?php
+                         $id = $_GET['madv'];
+                         $dsdv = dichvu_select_all_by_madv($id);
+                         extract($dsdv);
+                            
+                        echo '<h2>'.$tendv.' </h2>'?>
                         <span class="uudai" style="color:#c00000">ƯU ĐÃI VÀNG&nbsp;T11/2018- DÀNH TẶNG 99&nbsp;CẶP ĐÔI
                             ĐĂNG KÝ
                             SỚM
                             NHẤT&nbsp;&nbsp;</span>
-                        <div class="textcuoitrongoi">Đến với dịch vụ cưới trọn gói của áo cưới Mailisa, các cô dâu chú
-                            rể sẽ
-                            không
-                            còn phải lo
-                            toan vất vả trong việc chuẩn bị cho mình một đám cưới hoàn hảo. Từ khâu chụp Album cưới cho
-                            đến việc chuẩn bị trang phục, trang điểm, quay phim chụp hình ngày cưới, chúng tôi sẽ lo ch
-                            u toàn cho quý khách hàng, giúp quý khách tiết kiệm thời gian và chi phí . Chính vì vậy,
-                            dịch vụ
-                            cưới
-                            trọ
-                            n gói đang được rất nhiều các cô dâu chú rể sử dụng. Với hơn 15 năm kinh nghiệm trong ngành
-                            cướ
-                            i, lựa chọn Mailisa chính là lựa chọn giải pháp tài chính thông minh trong thời điểm kinh
-                            tế thị
-                            trư
-                            ờng khó khăn hiện nay. Đến với chúng tôi bạn hoàn toàn có thể tin tưởng và an tâm về sự
-                            tiết kiệm
-                            chi
-                            phí, t
-                            hời gian, nhanh chóng và tiện lợi. Toàn thể nhân viên của Ảnh viện áo cưới Mailisa tin
-                            rằng, sự
-                            chuyên
-                            nghiệp
-                            và tận tụy của quá trình lao động sẽ được đền đáp bằng những tấm hình cưới lung linh và nụ
-                            cười
-                            rạng rỡ
-                            đầy
-                            hạnh phúc của cô dâu chú rể trong ngày cưới…</div>
-                        <img src="./view/assets/img/a3-1.jpg" alt="" style="width:100%;height: auto;margin-bottom: 4px;">
-                        <img src="./view/assets/img/ab1.jpg" alt="" style="width:100%;height: auto;margin-bottom: 4px;">
+                        <div class="textcuoitrongoi"><?php echo $mo_ta; ?></div>
+                       <?php 
+                       $new_path = "./view/assets/upload/".$hinh;
+                       if(is_file($new_path)){
+                        $new_path="<img class='jmgmin' src='$new_path' width=100% height=auto>";
+                      }else{
+                        $new_path="no data";
+                      }
+                      echo $new_path;
+                       ?>
                         <!-- <img src="/assets/img/cuong1.jpeg" alt="" style="width:860px;height: auto;margin-bottom: 4px;">
                         <img src="/assets/img/cuong2.jpeg" alt="" style="width:860px;height: auto;margin-bottom: 4px;"> -->
 
                     </div>
-                    <div class="col-md-3" id="col-3-menu">
-                        <div class="fix-menu">
-                            <h3>Dịch Vụ Cưới</h3>
-                        <ul class="list-group">
-                            <li class="list-group-item">Giảm Giá</li>
-                            <li class="list-group-item">Trọn Gói Cưới</li>
-                            <li class="list-group-item">Chụp Hình Cưới</li>
-                            <li class="list-group-item">Trang Điểm Cô Dâu</li>
-                            <li class="list-group-item">Đơn Giá</li>
-                        </ul>
-
-
-
-                        <h3>Tin Tức Cưới</h3>
-                        <ul class="list-group">
-                            <li class="list-group-item">Chụp Hình Ngoại Cảnh</li>
-                            <li class="list-group-item">Trọn Gói Cưới</li>
-                            <li class="list-group-item">Chụp Hình Cưới</li>
-                            <li class="list-group-item">Trang Điểm Cô Dâu</li>
-                            <li class="list-group-item">Trang Trí</li>
-                        </ul>
-                        </div>
+                    <?php require_once 'sidebar.php' ?>
                         
 
                     </div>
@@ -153,8 +116,7 @@ require "./dao/dichvu.php";
                                   <th scope="col">STT</th>
                                   <th scope="col"> Ma Dịch Vụ</th>
                                   <th scope="col">Tên Dịch Vụ</th>
-                                  <th scope="col">Ngày cưới</th>
-                                  <th scope="col">Qùa Tặng</th>
+                                 
                                   <th scope="col">Đơn Giá</th>
                                   <th scope="col">Giảm Giá</th>
                                   <th scope="col">Hình</th>
@@ -181,8 +143,7 @@ require "./dao/dichvu.php";
                                 <th scope="row">'.$i.'</th>
                                 <td>'.$madv.'</td>
                                 <td>'.$tendv.'</td>
-                                <td>'.$ngaycuoi.'</td>
-                                <td>'.$quatang.'</td>
+                                
                                 <td>'.$don_gia.'</td>
                                 <td>'.$giam_gia.'</td>
                                 <td>'.$new_path.'</td>

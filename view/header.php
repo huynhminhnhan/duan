@@ -190,7 +190,7 @@ foreach ($dsdv as $dsdv) {
                       $new_path="no data";
                     }
     echo ' <li>
-    <a href="">
+    <a href="?dvdetail&madv='.$madv.'">
       '.$new_path.'
       <h3> '.$tendv.'</h3>
     </a>
